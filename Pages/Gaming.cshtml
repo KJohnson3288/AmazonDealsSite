@@ -1,0 +1,88 @@
+﻿@page
+@model AmazonDealsSite.Pages.GamingModel
+@{
+    ViewData["Title"] = "Gaming Deals";
+}
+
+<div id="wrapper" class="container my-2">
+
+    @* Title section *@
+    <div id="topGaming-section" class="row border-bottom bg-light">
+
+        <div id="topGaming-title" class="text-center ">
+            <h1 class="display-1">Top Gaming Deals</h1>
+        </div>
+
+        <div id="topGaming-description" class="text-center">
+            <p class="fs-6">
+                Tempor clita elitr kasd congue magna labore tempor nonummy sanctus consetetur minim sed 
+                labore ut accusam tation labore ut ea gubergren in takimata tincidunt voluptua et 
+                vulputate erat diam lorem
+            </p>
+        </div>
+
+    </div>
+
+    @* Search / Sort field *@
+    <div id="search-section" class="row my-2 border">
+        <nav class="navbar bg-body-tertiary">
+
+            <div class="container-fluid">
+                <div class="dropdown">
+                    <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filter
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item active" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </form>
+            </div>
+
+        </nav>
+    </div>
+
+    <div id="gaming-deals-title" class="row my-4 border-bottom">
+        <h3 class="display-3 fs-2 fw-semibold">Featured Game Discounts</h3>
+    </div>
+
+    @* Listed gaming products *@
+    <div id="topGaming-deals" class="row row-cols-sm-2 row-cols-md-3 my-3 py-2 g-3">
+
+        @foreach(var deal in Model.GamingDeals)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img src="@deal.ImageUrl" class="card-img-top" alt="@deal.Title">
+                    <div class="card-body">
+                        <h5 class="card-title">@deal.Title</h5>
+                        <p class="card-text">@deal.Description</p>
+
+                        @if (!string.IsNullOrEmpty(deal.Promo))
+                        {
+                            <button class="btn btn-outline-dark promo-btn"
+                                    onclick="copyCode('@deal.Promo')"
+                                    id="code-@deal.Promo">
+                                <span class="me-1">@deal.Promo</span>
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        }
+
+                        <a href="@deal.Link" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Deal</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+
+</div>

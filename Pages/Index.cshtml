@@ -1,0 +1,88 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div id="wrapper" class="container my-2">
+
+    <div id="hero-title" class="row text-center">
+        <h1 class="display-1">Todays Top Deals</h1>
+    </div>
+
+    <div id="hero-section" class="row row-cols-1 p-3">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/600x400" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <div id="recent-title" class="row text-center">
+        <h2 class="display-3">Deals For today</h2>
+    </div>
+
+    <div class="row row-cols-2 row-cols-md-2 g-4 my-2 py-3">
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://placehold.co/400" class="card-img-top" alt="Placeholder image for featured deal">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Short description</p>
+                    <a href="#" class="btn btn-primary">View Deal</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://placehold.co/400" class="card-img-top" alt="Placeholder image for featured deal">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Short description</p>
+                    <a href="#" class="btn btn-primary">View Deal</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://placehold.co/400" class="card-img-top" alt="Placeholder image for featured deal">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Short description</p>
+                    <a href="#" class="btn btn-primary">View Deal</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://placehold.co/400" class="card-img-top" alt="Placeholder image for featured deal">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Short description</p>
+                    <a href="#" class="btn btn-primary">View Deal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
