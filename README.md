@@ -40,3 +40,9 @@ This project is a demo-level Amazon Affiliate marketing site built with [ASP.NET
 - Database-backed product storage (SQL Server or SQLite)
 - Automated affiliate link generation
 
+## Author
+
+**Kazzuall Gamer**  
+- Portfolio Website: https://kjohnson3288.github.io/Portfolio-Site/  
+- Email: K.JOhnson3288@yahoo.com 
+- LinkedIn: https://www.linkedin.com/in/kjohnson3288/
